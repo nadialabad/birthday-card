@@ -1,0 +1,273 @@
+html, body {
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: rgb(13, 4, 79);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display :flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+/* CAKE */
+
+.cake {
+    position: relative;
+    width: 600px;
+    height: 225px;
+    background-color: #ffc7e7;
+    border-radius: 10px 10px 0 0;
+}
+
+.cake::before {
+    content: "";
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    height: 20px; 
+    background: #daaf8e;
+    box-shadow: 0px 70px 0px 0px #daaf8e;
+    z-index: 1;
+}
+
+/* FROSTING */
+
+.frosting {
+    height: 80px;
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.frosting::before {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 
+        92.5px 60px 0px 0px white,
+        185px 0px 0px 0px white,
+        277.5px 10px 0px 0px white,
+        370px 25px 0px 0px white,
+        462.5px 0px 0px 0px white,
+        555px 30px 0px 0px white;
+    z-index: 2;
+}
+
+.frosting::after {
+    content: "";
+    position: absolute;
+    width: 47.5px;
+    height: 100px;
+    background-color: #ffc7e7;
+    border-radius: 90%/60%;
+    left:45px;
+    top:30px;
+    box-shadow: 
+        92.5px 20px 0px 0px #ffc7e7,  
+        185px -10px 0px 0px #ffc7e7,
+        277.5px 10px 0px 0px #ffc7e7, 
+        370px -20px 0px 0px #ffc7e7,
+        462.5px 0px 0px 0px #ffc7e7;
+}
+
+/* CAKE STAND */
+
+.stand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cake-stand {
+    width: 650px;
+    height: 15px;
+    background-color: #d0d0d0;
+    border-radius: 10px 10px 70px 70px;
+}
+
+.cake-stand-neck {
+    width: 150px;
+    height: 150px;
+    background-color:#e8e8e8;
+    position: relative;
+}
+
+.cake-stand-neck::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 135px;
+    background-color: rgb(13, 4, 79);
+    right: 90px;
+    border-radius: 20px 20px 50px 50px;
+    box-shadow: 180px 0 rgb(13, 4, 79);
+}
+
+.cake-stand-base {
+    width: 250px;
+    height: 15px;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+}
+
+/* CANDLES */
+
+.candle-container {
+    width: 570px;
+    margin: auto;
+    position: relative; 
+    height: 60px;
+    top: -140px;
+}
+
+.candle {
+    position: absolute;
+    width: 10px;
+    height: 60px;
+    left: calc(50% - 5px);
+    background: repeating-linear-gradient(
+        45deg,
+        white,
+        white 7px,
+        rgb(159, 249, 255) 7px,
+        rgb(140, 247, 255) 14px
+    );
+}
+
+.candle::before {
+    content:"";
+    width:2px;
+    height: 8px;
+    position:absolute;
+    background-color:white;
+    top:-8px;
+    left: 4px;
+}
+
+.flame-wrapper {
+    right:33px;
+    position: relative;
+    animation: flicker 3ms ease-in infinite;
+}
+
+.flame {
+    position: absolute;
+    bottom: 0;
+    border-radius: 80% 0% 80% 50%;
+    transform: rotate(-45deg);
+} 
+
+.base {
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+.red {
+    margin-left: 23px;
+    margin-bottom: 6px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    box-shadow: 0px 0px 15px 5px red;
+}
+
+.orange {
+    margin-left: 28px;
+    margin-bottom: 6px;
+    width: 20px;
+    height: 20px;
+    background-color: orange;
+    box-shadow: 0px 0px 12px 6px orange;
+}
+
+.yellow {
+    margin-left: 33px;
+    margin-bottom: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    box-shadow: 0px 0px 9px 4px yellow;
+}
+
+.white {
+    margin-left: 36px;
+    margin-bottom: 6px;
+    width: 5px;
+    height: 5px;
+    background-color: lightyellow;
+    box-shadow: 0px 0px 10px 5px lightyellow;
+}
+
+@keyframes flicker {
+    0% {transform: rotate(-5deg);}
+    20% {transform: rotate(2deg) scaleY(1.10);}
+    40% {transform: rotate(-3deg);}
+    60% {transform: rotate(1deg);}
+    80% {transform: rotate(-1deg) scaleY(0.90);}
+    100% {transform: rotate(3deg);}
+}
+
+@keyframes swayDip {
+    0% { transform: translateX(0) translateY(0) rotate(0deg); }
+    25% { transform: translateX(-10px) translateY(10px) rotate(-5deg); }
+    50% { transform: translateX(0) translateY(20px) rotate(0deg); }
+    75% { transform: translateX(10px) translateY(10px) rotate(5deg); }
+    100% { transform: translateX(0) translateY(0) rotate(0deg); }
+}
+
+.flame-wrapper.swaying {
+    animation: swayDip 1s ease-in-out infinite;
+}
+
+/* AGE INPUT */
+
+.input-wrapper {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-label {
+    font-size: 1.5em;
+}
+
+.age-input {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(13, 4, 79);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    width: 50px;
+    text-align: center;
+}
+
+.age-input::placeholder {
+    color: white;
+    opacity: 0.2;
+}
+
+.age-input::-webkit-inner-spin-button,
+.age-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}

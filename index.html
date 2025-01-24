@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Birthday Card</title>
+</head>
+<body>
+    <div class="title">MAKE A WISH</div>
+    <div class="wrapper">
+        <div class="cake">
+            <div class="frosting"></div>
+            <div class="candle-container">
+                <div class="candle">
+                    <div class="flame-wrapper">
+                        <div class="flame red"></div>
+                        <div class="flame orange"></div>
+                        <div class="flame yellow"></div>
+                        <div class="flame white"></div>
+                        <div class="base blue"></div>
+                        <div class="base black"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="stand">
+            <div class="cake-stand"></div>
+            <div class="cake-stand-neck"></div>
+            <div class="cake-stand-base"></div>
+        </div>
+    </div>
+    
+    <div class="input-wrapper">
+        <label for="age" class="input-label">Enter your age:</label>
+        <input type="number" id="age" class="age-input" min = "1" max="120" placeholder="1-120">
+    </div>
+
+    <script src = "https:cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src = "script.js"></script>
+</body>
+</html>
